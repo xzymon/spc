@@ -2,9 +2,11 @@ package com.xzymon.spc.services.map;
 
 import com.xzymon.spc.model.Owner;
 import com.xzymon.spc.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
 	@Override

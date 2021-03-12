@@ -7,6 +7,7 @@ import com.xzymon.spc.services.VetService;
 import com.xzymon.spc.services.map.OwnerServiceMap;
 import com.xzymon.spc.services.map.VetServiceMap;
 import org.apache.catalina.util.ToStringUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -16,10 +17,10 @@ public class DataLoader implements CommandLineRunner {
 	private final OwnerService ownerService;
 	private final VetService vetService;
 
-	public DataLoader() {
-		ownerService = new OwnerServiceMap();
-		vetService = new VetServiceMap();
-
+	//@Autowired//not needed from SpringBoot 2.4.2
+	public DataLoader(OwnerService ownerService, VetService vetService) {
+		this.ownerService = ownerService;
+		this.vetService = vetService;
 	}
 
 	@Override

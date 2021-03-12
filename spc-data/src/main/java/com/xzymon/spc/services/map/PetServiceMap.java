@@ -2,9 +2,11 @@ package com.xzymon.spc.services.map;
 
 import com.xzymon.spc.model.Pet;
 import com.xzymon.spc.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
 	@Override

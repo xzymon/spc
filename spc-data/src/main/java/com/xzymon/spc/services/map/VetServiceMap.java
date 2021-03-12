@@ -2,9 +2,11 @@ package com.xzymon.spc.services.map;
 
 import com.xzymon.spc.model.Vet;
 import com.xzymon.spc.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
 	@Override
