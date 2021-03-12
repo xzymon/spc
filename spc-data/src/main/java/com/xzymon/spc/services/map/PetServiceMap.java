@@ -1,11 +1,11 @@
 package com.xzymon.spc.services.map;
 
 import com.xzymon.spc.model.Pet;
-import com.xzymon.spc.services.CrudService;
+import com.xzymon.spc.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
 	@Override
 	public Set<Pet> findAll() {
